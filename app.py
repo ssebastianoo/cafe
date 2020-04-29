@@ -15,6 +15,7 @@ def stories(story):
         l = json.load(f)
 
     try:
+        title = l[str(story)]["title"]
         story = l[str(story)]["file"]
     except KeyError:
         return "Story not found"
@@ -25,7 +26,7 @@ def stories(story):
 
     f = f.replace("\n", "<br>")
 
-    return f     
+    return render_template("story.html", title = title, story = f)     
 
 @app.route("/post", methods = ["GET", "POST"])
 def post():
