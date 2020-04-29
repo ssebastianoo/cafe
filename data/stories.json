@@ -1,1 +1,6 @@
-{}
+{
+    "the_example": {
+        "title": "the example",
+        "file": "the_example.txt"
+    }
+}
