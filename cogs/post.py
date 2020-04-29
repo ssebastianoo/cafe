@@ -30,8 +30,6 @@ class Post(commands.Cog):
             else:
                 end = True
 
-        # filepath = os.path.join(r'C:\Users\mediaworld\Documents\Python\cafe\data\stories', f'{file_name}.txt')
-
         filepath = f"data/stories/{file_name}.txt"
         
         file = open(filepath, "w")
@@ -41,12 +39,38 @@ class Post(commands.Cog):
         with open("data/stories.json", "r") as f:
             l = json.load(f)
 
-        l[str(file_name)] = {"title": str(title), "file": str(f"{file_name}.txt")}
+        l[str(file_name)] = {"title": str(title), "file": str(f"{file_name}.txt"), "author": int(ctx.author.id)}
 
         with open("data/stories.json", "w") as f:
             json.dump(l, f, indent = 4)
 
         await ctx.send(f"Done! Published at https://CafeAPI.ssebastianoo.repl.co/{file_name}")
+
+    @commands.command(aliases = ["delete", "del"])
+    async def remove(self, ctx, *, story):
+
+      "Remove a story you created"
+
+      with open("data/stories.json", "r") as f:
+        l = json.load(f)
+
+      try:
+        story_ = l[str(story)]
+
+      except KeyError:
+        return await ctx.send("Story not found.")
+
+      if int(story_["author"]) != ctx.author.id:
+        return await ctx.send("You are not the author of this story.")
+
+      os.remove(f"data/stories/{story_['file']}")
+      
+      l.pop(str(story))
+
+      with open("data/stories.json", "w") as f:
+        json.dump(l, f, indent = 4)
+
+      await ctx.send("Done!")
 
 def setup(bot):
     bot.add_cog(Post(bot))
