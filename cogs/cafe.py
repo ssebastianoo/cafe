@@ -3,7 +3,7 @@ from discord.ext import commands
 import json
 import os
 
-class Post(commands.Cog):
+class Cafe(commands.Cog):
     def __init__(self, bot):
         self.bot = bot 
 
@@ -44,7 +44,7 @@ class Post(commands.Cog):
         with open("data/stories.json", "w") as f:
             json.dump(l, f, indent = 4)
 
-        await ctx.send(f"Done! Published at https://CafeAPI.ssebastianoo.repl.co/{file_name}")
+        await ctx.send(f"Done! Published at https://cafe.seba.gq/{file_name}")
 
     @commands.command(aliases = ["delete", "del"])
     async def remove(self, ctx, *, story):
@@ -72,5 +72,15 @@ class Post(commands.Cog):
 
       await ctx.send("Done!")
 
+    @commands.command()
+    async def list(self, ctx, member: discord.Member = None):
+
+      "List of all the stories."
+
+      if not member:
+        member = ctx.author
+
+      
+
 def setup(bot):
-    bot.add_cog(Post(bot))
+    bot.add_cog(Cafe(bot))
