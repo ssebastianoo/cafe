@@ -6,7 +6,16 @@ app = Flask("")
 
 @app.route("/")
 def index():
-    return '<h1 style="text-align:center">BRUH</h1>'
+
+  with open("data/stories.json", "r") as f:
+    l = json.load(f)
+  
+  stories = ""
+
+  for a in l:
+    stories += f'<a href = "https://CafeAPI.ssebastianoo.repl.co/{a}">{l[a]["title"]}</a><br>'
+
+  return stories
 
 @app.route("/<story>")
 def stories(story):
@@ -26,7 +35,7 @@ def stories(story):
 
     f = f.replace("\n", "<br>")
 
-    return render_template("story.html", title = title, story = f)     
+    return render_template("story.html", title = title, story = f)
 
 @app.route("/post", methods = ["GET", "POST"])
 def post():
