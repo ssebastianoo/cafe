@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+    <title>Cafè</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2cd6389f66.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Pangolin', cursive;
+            overflow-x: hidden;
+            background: #ffeaa7;
+        }
+
+        .bar {
+            background: RGBA(255, 118, 117, 0.5);
+            float: left;
+            padding: 0px 13px;
+        }
+        .barlink {
+            text-decoration: none;
+            color: RGBA(114, 137, 218, 0.5);
+            transition-duration: .2s;
+        }
+
+        .barlink:hover {
+            color: RGBA(114, 137, 218, 1);
+        }
+        
+        .title {
+            font-size: 50px;
+            float: left;
+            text-decoration: none;
+            color: black;
+            transition-duration: 1s;
+        }
+
+        .title:hover {
+            transform: rotate(720deg);
+        }
+
+        .barlink {
+            font-size: 30px;
+            margin-left: 30px;
+        }
+
+        .barlinks {
+            float: left;
+            transform: translateY(16px);
+        }
+
+        .stories {
+            margin-top: 10%;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .story {
+            text-decoration: none;
+            color: black;
+            transition-duration: .3s;
+        }
+
+        .story:hover {
+            color: RGBA(255, 118, 117, 1.0)
+        }
+
+        i {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class = "bar">
+        <a class = "title" href = "/">Cafè</a>
+        <div class = "barlinks">
+            <a href = "/stories" class = "barlink">Stories</a>
+            <a href = "https://discord.gg/gaDvB8s" class = "barlink">Discord</a>
+            <a href = "/login" class = "barlink">Login</a>
+        </div>
+    </div>
+    <br><br>
+    <div class = "stories">
+      {% for story in stories %}
+        <i class="far fa-bookmark"></i> <a class = "story" href = "https://cafe.seba.gq/{{story}}">{{stories[story]["title"]}} <em>[{{stories[story]["writer"]["name"]}}]</em></a><br><br>
+      {% endfor %}
+    </div>
+</body>

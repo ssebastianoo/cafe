@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+    <title>Cafè</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Pangolin', cursive;
+            overflow: hidden;
+            background: #ffeaa7;
+        }
+
+        .bar {
+            background: RGBA(255, 118, 117, 0.5);
+            float: left;
+            padding: 0px 13px;
+        }
+        .barlink {
+            text-decoration: none;
+            color: RGBA(114, 137, 218, 0.5);
+            transition-duration: .2s;
+        }
+
+        .barlink:hover {
+            color: RGBA(114, 137, 218, 1);
+        }
+        
+        .title {
+            font-size: 50px;
+            float: left;
+            text-decoration: none;
+            color: black;
+            transition-duration: 1s;
+        }
+
+        .title:hover {
+            transform: rotate(720deg);
+        }
+
+        .barlink {
+            font-size: 30px;
+            margin-left: 30px;
+        }
+
+        .barlinks {
+            float: left;
+            transform: translateY(16px);
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 50%;
+            position: absolute;
+            width: 100%;
+            transform: translateY(-50%);
+        }
+
+        .colored {
+            transition-duration: .5s;
+            cursor: default;
+        }
+        .colored:hover {
+            color: #c7e8a9;
+        }
+    </style>
+</head>
+<body>
+    <div class = "bar">
+        <a class = "title" href = "/">Cafè</a>
+        <div class = "barlinks">
+            <a href = "/stories" class = "barlink">Stories</a>
+            <a href = "https://discord.gg/gaDvB8s" class = "barlink">Discord</a>
+            <a href = "/login" class = "barlink">Login</a>
+        </div>
+    </div>
+    <br><br>
+    <div class = "container">
+        <h1><a class = "colored">Hi!</a> <a class = "colored">Welcome</a> <a class = "colored">to</a> <a class = "colored">Cafè!</a></h1>
+    </div>
+</body>
