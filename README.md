@@ -6,7 +6,7 @@ This is a project thay brings stories from Discord to a website throught a Flask
 
 **Where can I find all?**
 
-We have a [discord server](https://discord.gg/gaDvB8s) (only italian there)!
+We have a [discord server](https://discord.gg/gaDvB8s) (only italian there).
 
 And obvious we have a [website](https://cafe.seba.gq) where you can find all the stories.
 
