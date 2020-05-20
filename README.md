@@ -20,3 +20,7 @@ And obvious we have a [website](https://cafe.seba.gq) where you can find all the
 > |--- v0.0.1
 >
 > |---- Added all 
+> 
+> |--- v0.0.2
+> 
+> |---- Secured https: redirect
