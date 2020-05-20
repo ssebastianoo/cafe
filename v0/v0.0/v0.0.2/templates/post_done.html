@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Post a story</title>
+    </head>
+    <body>
+        <h1>Post a story</h1> 
+        <h2>Copy this and paste it in our discord server</h2>
+        <input class = "box", type = "text", value = "{{input}}", id = "output">
+        <button onclick="copyText()">Copy</button>
+    <script>
+        if (window.location.protocol === "http:") {
+          location.href = "https://" + window.location.hostname + window.location.pathname
+        };
+        
+        function copyText() {
+            var copyText = document.getElementById("output");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999)
+            document.execCommand("copy");
+        }
+    </script>
+    </body>
+</html>
