@@ -1,26 +1,29 @@
-# C A F È
+`2023 upt:` i regret all of this why tf did i organize everything in folders on github?????????????????
 
-**OwO what's this?**
+---
+# ~C A F È~
 
-This is a project thay brings stories from Discord to a website throught a Flask app.
+~**OwO what's this?**~
 
-**Where can I find all?**
+~This is a project thay brings stories from Discord to a website throught a Flask app.~
 
-We have a [discord server](https://discord.gg/gaDvB8s) (only italian there).
+~**Where can I find all?**~
 
-And obvious we have a [website](https://cafe.seba.gq) where you can find all the stories.
+~We have a [discord server](https://discord.gg/gaDvB8s) (only italian there).~
 
-# C H A N G E L O G
+~And obvious we have a [website](https://cafe.seba.gq) where you can find all the stories.~
 
-**v0**
-> |- v0.0
+# ~C H A N G E L O G~
+
+~**v0**~
+>~|- v0.0~
 >
-> |-- v 0.0
+> ~|-- v 0.0~
 >
-> |--- v0.0.1
+> ~|--- v0.0.1~
 >
-> |---- Added all 
+> ~|---- Added all~
 > 
-> |--- v0.0.2
+> ~|--- v0.0.2~
 > 
-> |---- Secured https: redirect
+> ~|---- Secured https: redirect~
